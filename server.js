@@ -1,11 +1,9 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
-var port = process.env.PORT || 8080;
-app.set('view engine', 'ejs');
+const port = process.env.PORT || 8080;
 
-// make express look in the public directory for assets (css/js/img)
-// app.use(express.static('wjml.herokuapp.com' + '/public'));
+// faz o express procurar na pasta 'public' pelos assets (css/js/img)
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
